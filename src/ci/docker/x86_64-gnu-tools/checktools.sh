@@ -3,7 +3,7 @@
 set -eu
 
 X_PY="$1"
-TOOLSTATE_FILE="$(realpath $2)"
+TOOLSTATE_FILE="$(realpath -m $2)"
 OS="$3"
 COMMIT="$(git rev-parse HEAD)"
 CHANGED_FILES="$(git diff --name-status HEAD HEAD^)"
